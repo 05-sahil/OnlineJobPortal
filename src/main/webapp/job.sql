@@ -30,7 +30,7 @@ CREATE TABLE job_applications (
     job_id INT,
     applicant_id INT,
     application_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
- status ENUM('pending', 'accepted', 'rejected') DEFAULT 'pending',
+    status ENUM('pending', 'accepted', 'rejected') DEFAULT 'pending',
     FOREIGN KEY (job_id) REFERENCES job_postings(job_id),
     FOREIGN KEY (applicant_id) REFERENCES users(user_id)
 );
